@@ -1,0 +1,20 @@
+*{
+    background-color: #F0F0F0;
+}
+.formulario{
+    display: flex;
+    justify-content: center;
+    height: 100hv; 
+}
+.btnvoltar{
+    display: flex;
+    justify-content: center;
+    margin-top: -38px; 
+    margin-left: 20px;
+}
+.btnremove{
+    display: flex;
+    justify-content: center;
+    margin-left: 780px;
+    margin-top: -34px; 
+}

@@ -1,0 +1,27 @@
+{{%% load crispy_forms_tags %%}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="row">
+        <div class="col-md-4 offset-md-4">
+            <div class="card auth-card">
+                <div class="card-body">
+                    <h4 class="card_title text-center">Entrar No sistema de Contas</h4>
+                    <form method="POST">
+                        {%csrf_token%}
+                        <input type="hiden" name='text' value="{{ next }}">
+                        {{form |crispy }}
+                        <butto type='submit' >Entrar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
