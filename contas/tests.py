@@ -2,21 +2,22 @@ from django.test import TestCase
 from selenium import webdriver
 from .views import transacao
 from django.urls import resolve
+from django.http import HttpRequest
 import unittest
 
 class TestGerenciador(unittest.TestCase):
-    def setUp(self):
-        self.browser = webdriver.Chrome()
-    def tearDown(self):
-        self.browser.quit()
 
-    def test_title_in_app(self):
-        self.browser.get('http://127.0.0.1:8000/home')
-        self.assertIn('Transacao', self.browser.title)
-
-    def test_open_homePage(self):
+    def test_roort_url_resolves_to_homePage(self):
         page = resolve('/home')
         self.assertEqual(transacao, page.func)
 
+    def test_home_page_returns_html(self):
+        request = HttpRequest()
+        response = transacao(request)
+        html = response.content.decode('utf8')
+        self.assertTrue(html.startswith(''))
+        self.assertIn('<title>Transacao</title>', html)
+        self.assertTrue(html.endswith('</html>'))
+        
 if __name__ == 'main':
     unittest.main(warnings=ignore)
