@@ -18,6 +18,5 @@ class TestGerenciador(unittest.TestCase):
         self.assertTrue(html.startswith(''))
         self.assertIn('<title>Transacao</title>', html)
         self.assertTrue(html.endswith('</html>'))
-        
-if __name__ == 'main':
-    unittest.main(warnings=ignore)
+
+    def
