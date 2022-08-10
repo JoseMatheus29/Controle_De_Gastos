@@ -18,5 +18,3 @@ class TestGerenciador(unittest.TestCase):
         self.assertTrue(html.startswith(''))
         self.assertIn('<title>Transacao</title>', html)
         self.assertTrue(html.endswith('</html>'))
-
-    def

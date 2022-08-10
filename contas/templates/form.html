@@ -15,15 +15,15 @@
     <form method="POST">
     {%csrf_token%}
     {{form |crispy }}
-    <button type="submit" class="btn btn-primary ">Salvar</button>
+    <button type="submit" class="btn btn-primary" name="salvar">Salvar</button>
     {%if obj %}
     <div class="btnremove">
-    <button><a href="{% url 'deletar' obj.id %}" > Remover</button></Button>
+    <Button><a href="{% url 'deletar' obj.id %}" > Remover</a></Button>
     </div>
     {%endif%}
 </form></div>
 <div >
-    <form action="{% url 'transacao'%}" class="btnvoltar"><button class="btn btn-primary">Voltar</button></form>
+    <form action="{% url 'transacao'%}" class="btnvoltar" name="placeholder "><button class="btn btn-primary">Voltar</button></form>
 </div>
 </body>
 </html>
