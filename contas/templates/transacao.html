@@ -17,14 +17,14 @@
     </nav>
     <h2>Lista de transições</h2>
     <table>
-            <tr >
+            <tr id="Categorias">
             <td>Nome</td>
             <td>Valor</td>
             <td>Categoria</td>
             <td>Data</td></tr>
             {%for t in transacao %}
-            <tr>
-            <td><a style="color: brown;" href="{% url 'atualizar' t.id %}"><button class="botaoatt">{{t}}</button></a></td>
+            <tr id = 'Valores'>
+            <td ><a style="color: brown;" href="{% url 'atualizar' t.id %}" id="remove"><button class="botaoatt">{{t}}</button></a></td>
             <td>{{t.valor}} </td>
             <td>{{t.categoria}} </td>
             <td>{{t.data}} </td>

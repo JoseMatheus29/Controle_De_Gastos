@@ -18,7 +18,7 @@
     <button type="submit" class="btn btn-primary" name="salvar">Salvar</button>
     {%if obj %}
     <div class="btnremove">
-    <Button><a href="{% url 'deletar' obj.id %}" > Remover</a></Button>
+    <Button><a href="{% url 'deletar' obj.id %}" id="delete"> Remover</a></Button>
     </div>
     {%endif%}
 </form></div>
