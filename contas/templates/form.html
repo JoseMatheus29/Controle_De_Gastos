@@ -15,7 +15,7 @@
     <form method="POST">
     {%csrf_token%}
     {{form |crispy }}
-    <button type="submit" class="btn btn-primary" name="salvar">Salvar</button>
+    <button type="submit" class="btn btn-primary" id="salvar">Salvar</button>
     {%if obj %}
     <div class="btnremove">
     <Button><a href="{% url 'deletar' obj.id %}" id="delete"> Remover</a></Button>

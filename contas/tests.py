@@ -1,5 +1,3 @@
-from django.test import TestCase
-from selenium import webdriver
 from .views import transacao
 from django.urls import resolve
 from django.http import HttpRequest
